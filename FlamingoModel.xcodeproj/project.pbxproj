@@ -7,11 +7,67 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		431299051A63E3EB00FF9965 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 431299041A63E3EB00FF9965 /* AppDelegate.m */; };
 		431299071A63E3EB00FF9965 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 431299061A63E3EB00FF9965 /* main.m */; };
 		431299091A63E3EB00FF9965 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 431299081A63E3EB00FF9965 /* Images.xcassets */; };
 		4312990C1A63E3EB00FF9965 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4312990A1A63E3EB00FF9965 /* MainMenu.xib */; };
-		431299181A63E3EB00FF9965 /* FlamingoModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 431299171A63E3EB00FF9965 /* FlamingoModelTests.m */; };
+		43253DCF1A64097D00BEFDAB /* FFEAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DCB1A64097D00BEFDAB /* FFEAccount.m */; };
+		43253DD01A64097D00BEFDAB /* FFECatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DCD1A64097D00BEFDAB /* FFECatalog.m */; };
+		43253DD51A6409A600BEFDAB /* ATLCatalog.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DD21A6409A600BEFDAB /* ATLCatalog.m */; };
+		43253DD61A6409A600BEFDAB /* ATLEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DD41A6409A600BEFDAB /* ATLEntry.m */; };
+		43253DD91A6409DD00BEFDAB /* GeoMetricFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DD81A6409DD00BEFDAB /* GeoMetricFunctions.m */; };
+		43253DE21A640A0B00BEFDAB /* ATLRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DDB1A640A0B00BEFDAB /* ATLRoute.m */; };
+		43253DE31A640A0B00BEFDAB /* ATLRouteOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DDD1A640A0B00BEFDAB /* ATLRouteOverlay.m */; };
+		43253DE41A640A0B00BEFDAB /* ATLRoutePosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DDF1A640A0B00BEFDAB /* ATLRoutePosition.m */; };
+		43253DE51A640A0B00BEFDAB /* ATLSubRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DE11A640A0B00BEFDAB /* ATLSubRoute.m */; };
+		43253DE81A640A2300BEFDAB /* ATLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DE71A640A2300BEFDAB /* ATLNode.m */; };
+		43253DEF1A640A4400BEFDAB /* ATLJunction.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DEA1A640A4400BEFDAB /* ATLJunction.m */; };
+		43253DF01A640A4400BEFDAB /* ATLLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DEC1A640A4400BEFDAB /* ATLLocation.m */; };
+		43253DF11A640A4400BEFDAB /* ATLStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DEE1A640A4400BEFDAB /* ATLStation.m */; };
+		43253DF41A640A5B00BEFDAB /* ATLAlias.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DF31A640A5B00BEFDAB /* ATLAlias.m */; };
+		43253DF71A640A6A00BEFDAB /* ATLStationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DF61A640A6A00BEFDAB /* ATLStationAnnotation.m */; };
+		43253E0C1A640AE000BEFDAB /* ATLCalendarRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DF91A640AE000BEFDAB /* ATLCalendarRule.m */; };
+		43253E0D1A640AE000BEFDAB /* ATLMissionRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DFB1A640AE000BEFDAB /* ATLMissionRule.m */; };
+		43253E0E1A640AE000BEFDAB /* ATLOrganization.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DFD1A640AE000BEFDAB /* ATLOrganization.m */; };
+		43253E0F1A640AE000BEFDAB /* ATLRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253DFF1A640AE000BEFDAB /* ATLRule.m */; };
+		43253E101A640AE000BEFDAB /* ATLSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E011A640AE000BEFDAB /* ATLSeries.m */; };
+		43253E111A640AE000BEFDAB /* ATLSeriesRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E031A640AE000BEFDAB /* ATLSeriesRef.m */; };
+		43253E121A640AE000BEFDAB /* ATLService.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E051A640AE000BEFDAB /* ATLService.m */; };
+		43253E131A640AE000BEFDAB /* ATLServicePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E071A640AE000BEFDAB /* ATLServicePoint.m */; };
+		43253E141A640AE000BEFDAB /* ATLServiceRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E091A640AE000BEFDAB /* ATLServiceRef.m */; };
+		43253E151A640AE000BEFDAB /* ATLServiceRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E0B1A640AE000BEFDAB /* ATLServiceRule.m */; };
+		43253E1C1A640B4300BEFDAB /* ATLPathNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E171A640B4300BEFDAB /* ATLPathNode.m */; };
+		43253E1D1A640B4300BEFDAB /* ATLTimePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E191A640B4300BEFDAB /* ATLTimePath.m */; };
+		43253E1E1A640B4300BEFDAB /* ATLTimePoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E1B1A640B4300BEFDAB /* ATLTimePoint.m */; };
+		43253E231A640BF400BEFDAB /* ATLMission.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E201A640BF400BEFDAB /* ATLMission.m */; };
+		43253E241A640BF400BEFDAB /* ATLStop.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E221A640BF400BEFDAB /* ATLStop.m */; };
+		43253E311A640C2200BEFDAB /* ATLJourney.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E261A640C2200BEFDAB /* ATLJourney.m */; };
+		43253E321A640C2200BEFDAB /* ATLJourneyElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E281A640C2200BEFDAB /* ATLJourneyElement.m */; };
+		43253E331A640C2200BEFDAB /* ATLTrajectory.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E2A1A640C2200BEFDAB /* ATLTrajectory.m */; };
+		43253E341A640C2200BEFDAB /* ATLTransfer.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E2C1A640C2200BEFDAB /* ATLTransfer.m */; };
+		43253E351A640C2200BEFDAB /* ATLTravelSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E2E1A640C2200BEFDAB /* ATLTravelSection.m */; };
+		43253E361A640C2200BEFDAB /* ATLVisit.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E301A640C2200BEFDAB /* ATLVisit.m */; };
+		43253E391A640C4D00BEFDAB /* FFEDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E381A640C4D00BEFDAB /* FFEDataController.m */; };
+		43253E401A640C7200BEFDAB /* ATLDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E3B1A640C7200BEFDAB /* ATLDataController.m */; };
+		43253E411A640C7200BEFDAB /* ATLFileImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E3D1A640C7200BEFDAB /* ATLFileImporter.m */; };
+		43253E421A640C7200BEFDAB /* ATLScheduleImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E3F1A640C7200BEFDAB /* ATLScheduleImporter.m */; };
+		43253E451A640C8000BEFDAB /* CHCSVparser.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E441A640C8000BEFDAB /* CHCSVparser.m */; };
+		43253E481A640CAD00BEFDAB /* ATLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E471A640CAD00BEFDAB /* ATLAppDelegate.m */; };
+		43253E511A640CD000BEFDAB /* NSDate+Formatters.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E4A1A640CD000BEFDAB /* NSDate+Formatters.m */; };
+		43253E521A640CD000BEFDAB /* NSHTTPURLResponse+HeaderInterpretation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E4C1A640CD000BEFDAB /* NSHTTPURLResponse+HeaderInterpretation.m */; };
+		43253E531A640CD000BEFDAB /* NSManagedObjectContext+FFEUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E4E1A640CD000BEFDAB /* NSManagedObjectContext+FFEUtilities.m */; };
+		43253E541A640CD000BEFDAB /* NSMutableURLRequest+HeaderInterpretation.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E501A640CD000BEFDAB /* NSMutableURLRequest+HeaderInterpretation.m */; };
+		43253E591A640D3A00BEFDAB /* ATLImporterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E561A640D3A00BEFDAB /* ATLImporterTests.m */; };
+		43253E5A1A640D3A00BEFDAB /* ATLJourneyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E571A640D3A00BEFDAB /* ATLJourneyTests.m */; };
+		43253E5B1A640D3A00BEFDAB /* ATLModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 43253E581A640D3A00BEFDAB /* ATLModelTests.m */; };
+		43253E641A640D5900BEFDAB /* calendar_dates.txt in Resources */ = {isa = PBXBuildFile; fileRef = 43253E5C1A640D5900BEFDAB /* calendar_dates.txt */; };
+		43253E651A640D5900BEFDAB /* feed_info.txt in Resources */ = {isa = PBXBuildFile; fileRef = 43253E5D1A640D5900BEFDAB /* feed_info.txt */; };
+		43253E661A640D5900BEFDAB /* stop_times.txt in Resources */ = {isa = PBXBuildFile; fileRef = 43253E5E1A640D5900BEFDAB /* stop_times.txt */; };
+		43253E671A640D5900BEFDAB /* t2_calendar_dates.txt in Resources */ = {isa = PBXBuildFile; fileRef = 43253E5F1A640D5900BEFDAB /* t2_calendar_dates.txt */; };
+		43253E681A640D5900BEFDAB /* t2_data.xml in Resources */ = {isa = PBXBuildFile; fileRef = 43253E601A640D5900BEFDAB /* t2_data.xml */; };
+		43253E691A640D5900BEFDAB /* t2_stop_times.txt in Resources */ = {isa = PBXBuildFile; fileRef = 43253E611A640D5900BEFDAB /* t2_stop_times.txt */; };
+		43253E6A1A640D5900BEFDAB /* t2_trips.txt in Resources */ = {isa = PBXBuildFile; fileRef = 43253E621A640D5900BEFDAB /* t2_trips.txt */; };
+		43253E6B1A640D5900BEFDAB /* trips.txt in Resources */ = {isa = PBXBuildFile; fileRef = 43253E631A640D5900BEFDAB /* trips.txt */; };
+		43253E6E1A64130B00BEFDAB /* ATLModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 43253E6C1A64130B00BEFDAB /* ATLModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,14 +83,118 @@
 /* Begin PBXFileReference section */
 		431298FE1A63E3EB00FF9965 /* FlamingoModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlamingoModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		431299021A63E3EB00FF9965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		431299031A63E3EB00FF9965 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		431299041A63E3EB00FF9965 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		431299061A63E3EB00FF9965 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		431299081A63E3EB00FF9965 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4312990B1A63E3EB00FF9965 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		431299111A63E3EB00FF9965 /* FlamingoModelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlamingoModelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		431299161A63E3EB00FF9965 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		431299171A63E3EB00FF9965 /* FlamingoModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlamingoModelTests.m; sourceTree = "<group>"; };
+		43253DCA1A64097D00BEFDAB /* FFEAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFEAccount.h; sourceTree = "<group>"; };
+		43253DCB1A64097D00BEFDAB /* FFEAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFEAccount.m; sourceTree = "<group>"; };
+		43253DCC1A64097D00BEFDAB /* FFECatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFECatalog.h; sourceTree = "<group>"; };
+		43253DCD1A64097D00BEFDAB /* FFECatalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFECatalog.m; sourceTree = "<group>"; };
+		43253DCE1A64097D00BEFDAB /* FFESyncing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFESyncing.h; sourceTree = "<group>"; };
+		43253DD11A6409A600BEFDAB /* ATLCatalog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLCatalog.h; sourceTree = "<group>"; };
+		43253DD21A6409A600BEFDAB /* ATLCatalog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLCatalog.m; sourceTree = "<group>"; };
+		43253DD31A6409A600BEFDAB /* ATLEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLEntry.h; sourceTree = "<group>"; };
+		43253DD41A6409A600BEFDAB /* ATLEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLEntry.m; sourceTree = "<group>"; };
+		43253DD71A6409DD00BEFDAB /* GeoMetricFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeoMetricFunctions.h; sourceTree = "<group>"; };
+		43253DD81A6409DD00BEFDAB /* GeoMetricFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeoMetricFunctions.m; sourceTree = "<group>"; };
+		43253DDA1A640A0B00BEFDAB /* ATLRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLRoute.h; sourceTree = "<group>"; };
+		43253DDB1A640A0B00BEFDAB /* ATLRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLRoute.m; sourceTree = "<group>"; };
+		43253DDC1A640A0B00BEFDAB /* ATLRouteOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLRouteOverlay.h; sourceTree = "<group>"; };
+		43253DDD1A640A0B00BEFDAB /* ATLRouteOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLRouteOverlay.m; sourceTree = "<group>"; };
+		43253DDE1A640A0B00BEFDAB /* ATLRoutePosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLRoutePosition.h; sourceTree = "<group>"; };
+		43253DDF1A640A0B00BEFDAB /* ATLRoutePosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLRoutePosition.m; sourceTree = "<group>"; };
+		43253DE01A640A0B00BEFDAB /* ATLSubRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLSubRoute.h; sourceTree = "<group>"; };
+		43253DE11A640A0B00BEFDAB /* ATLSubRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLSubRoute.m; sourceTree = "<group>"; };
+		43253DE61A640A2300BEFDAB /* ATLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLNode.h; sourceTree = "<group>"; };
+		43253DE71A640A2300BEFDAB /* ATLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLNode.m; sourceTree = "<group>"; };
+		43253DE91A640A4400BEFDAB /* ATLJunction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLJunction.h; sourceTree = "<group>"; };
+		43253DEA1A640A4400BEFDAB /* ATLJunction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLJunction.m; sourceTree = "<group>"; };
+		43253DEB1A640A4400BEFDAB /* ATLLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLLocation.h; sourceTree = "<group>"; };
+		43253DEC1A640A4400BEFDAB /* ATLLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLLocation.m; sourceTree = "<group>"; };
+		43253DED1A640A4400BEFDAB /* ATLStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLStation.h; sourceTree = "<group>"; };
+		43253DEE1A640A4400BEFDAB /* ATLStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLStation.m; sourceTree = "<group>"; };
+		43253DF21A640A5B00BEFDAB /* ATLAlias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLAlias.h; sourceTree = "<group>"; };
+		43253DF31A640A5B00BEFDAB /* ATLAlias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLAlias.m; sourceTree = "<group>"; };
+		43253DF51A640A6A00BEFDAB /* ATLStationAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLStationAnnotation.h; sourceTree = "<group>"; };
+		43253DF61A640A6A00BEFDAB /* ATLStationAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLStationAnnotation.m; sourceTree = "<group>"; };
+		43253DF81A640AE000BEFDAB /* ATLCalendarRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLCalendarRule.h; sourceTree = "<group>"; };
+		43253DF91A640AE000BEFDAB /* ATLCalendarRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLCalendarRule.m; sourceTree = "<group>"; };
+		43253DFA1A640AE000BEFDAB /* ATLMissionRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLMissionRule.h; sourceTree = "<group>"; };
+		43253DFB1A640AE000BEFDAB /* ATLMissionRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLMissionRule.m; sourceTree = "<group>"; };
+		43253DFC1A640AE000BEFDAB /* ATLOrganization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLOrganization.h; sourceTree = "<group>"; };
+		43253DFD1A640AE000BEFDAB /* ATLOrganization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLOrganization.m; sourceTree = "<group>"; };
+		43253DFE1A640AE000BEFDAB /* ATLRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLRule.h; sourceTree = "<group>"; };
+		43253DFF1A640AE000BEFDAB /* ATLRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLRule.m; sourceTree = "<group>"; };
+		43253E001A640AE000BEFDAB /* ATLSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLSeries.h; sourceTree = "<group>"; };
+		43253E011A640AE000BEFDAB /* ATLSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLSeries.m; sourceTree = "<group>"; };
+		43253E021A640AE000BEFDAB /* ATLSeriesRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLSeriesRef.h; sourceTree = "<group>"; };
+		43253E031A640AE000BEFDAB /* ATLSeriesRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLSeriesRef.m; sourceTree = "<group>"; };
+		43253E041A640AE000BEFDAB /* ATLService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLService.h; sourceTree = "<group>"; };
+		43253E051A640AE000BEFDAB /* ATLService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLService.m; sourceTree = "<group>"; };
+		43253E061A640AE000BEFDAB /* ATLServicePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLServicePoint.h; sourceTree = "<group>"; };
+		43253E071A640AE000BEFDAB /* ATLServicePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLServicePoint.m; sourceTree = "<group>"; };
+		43253E081A640AE000BEFDAB /* ATLServiceRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLServiceRef.h; sourceTree = "<group>"; };
+		43253E091A640AE000BEFDAB /* ATLServiceRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLServiceRef.m; sourceTree = "<group>"; };
+		43253E0A1A640AE000BEFDAB /* ATLServiceRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLServiceRule.h; sourceTree = "<group>"; };
+		43253E0B1A640AE000BEFDAB /* ATLServiceRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLServiceRule.m; sourceTree = "<group>"; };
+		43253E161A640B4300BEFDAB /* ATLPathNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPathNode.h; sourceTree = "<group>"; };
+		43253E171A640B4300BEFDAB /* ATLPathNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPathNode.m; sourceTree = "<group>"; };
+		43253E181A640B4300BEFDAB /* ATLTimePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLTimePath.h; sourceTree = "<group>"; };
+		43253E191A640B4300BEFDAB /* ATLTimePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLTimePath.m; sourceTree = "<group>"; };
+		43253E1A1A640B4300BEFDAB /* ATLTimePoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLTimePoint.h; sourceTree = "<group>"; };
+		43253E1B1A640B4300BEFDAB /* ATLTimePoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLTimePoint.m; sourceTree = "<group>"; };
+		43253E1F1A640BF400BEFDAB /* ATLMission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLMission.h; sourceTree = "<group>"; };
+		43253E201A640BF400BEFDAB /* ATLMission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLMission.m; sourceTree = "<group>"; };
+		43253E211A640BF400BEFDAB /* ATLStop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLStop.h; sourceTree = "<group>"; };
+		43253E221A640BF400BEFDAB /* ATLStop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLStop.m; sourceTree = "<group>"; };
+		43253E251A640C2200BEFDAB /* ATLJourney.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLJourney.h; sourceTree = "<group>"; };
+		43253E261A640C2200BEFDAB /* ATLJourney.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLJourney.m; sourceTree = "<group>"; };
+		43253E271A640C2200BEFDAB /* ATLJourneyElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLJourneyElement.h; sourceTree = "<group>"; };
+		43253E281A640C2200BEFDAB /* ATLJourneyElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLJourneyElement.m; sourceTree = "<group>"; };
+		43253E291A640C2200BEFDAB /* ATLTrajectory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLTrajectory.h; sourceTree = "<group>"; };
+		43253E2A1A640C2200BEFDAB /* ATLTrajectory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLTrajectory.m; sourceTree = "<group>"; };
+		43253E2B1A640C2200BEFDAB /* ATLTransfer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLTransfer.h; sourceTree = "<group>"; };
+		43253E2C1A640C2200BEFDAB /* ATLTransfer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLTransfer.m; sourceTree = "<group>"; };
+		43253E2D1A640C2200BEFDAB /* ATLTravelSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLTravelSection.h; sourceTree = "<group>"; };
+		43253E2E1A640C2200BEFDAB /* ATLTravelSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLTravelSection.m; sourceTree = "<group>"; };
+		43253E2F1A640C2200BEFDAB /* ATLVisit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLVisit.h; sourceTree = "<group>"; };
+		43253E301A640C2200BEFDAB /* ATLVisit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLVisit.m; sourceTree = "<group>"; };
+		43253E371A640C4D00BEFDAB /* FFEDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFEDataController.h; sourceTree = "<group>"; };
+		43253E381A640C4D00BEFDAB /* FFEDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFEDataController.m; sourceTree = "<group>"; };
+		43253E3A1A640C7200BEFDAB /* ATLDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLDataController.h; sourceTree = "<group>"; };
+		43253E3B1A640C7200BEFDAB /* ATLDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLDataController.m; sourceTree = "<group>"; };
+		43253E3C1A640C7200BEFDAB /* ATLFileImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLFileImporter.h; sourceTree = "<group>"; };
+		43253E3D1A640C7200BEFDAB /* ATLFileImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLFileImporter.m; sourceTree = "<group>"; };
+		43253E3E1A640C7200BEFDAB /* ATLScheduleImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLScheduleImporter.h; sourceTree = "<group>"; };
+		43253E3F1A640C7200BEFDAB /* ATLScheduleImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLScheduleImporter.m; sourceTree = "<group>"; };
+		43253E431A640C8000BEFDAB /* CHCSVparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVparser.h; sourceTree = "<group>"; };
+		43253E441A640C8000BEFDAB /* CHCSVparser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVparser.m; sourceTree = "<group>"; };
+		43253E461A640CAD00BEFDAB /* ATLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLAppDelegate.h; sourceTree = "<group>"; };
+		43253E471A640CAD00BEFDAB /* ATLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLAppDelegate.m; sourceTree = "<group>"; };
+		43253E491A640CD000BEFDAB /* NSDate+Formatters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Formatters.h"; sourceTree = "<group>"; };
+		43253E4A1A640CD000BEFDAB /* NSDate+Formatters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Formatters.m"; sourceTree = "<group>"; };
+		43253E4B1A640CD000BEFDAB /* NSHTTPURLResponse+HeaderInterpretation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSHTTPURLResponse+HeaderInterpretation.h"; sourceTree = "<group>"; };
+		43253E4C1A640CD000BEFDAB /* NSHTTPURLResponse+HeaderInterpretation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSHTTPURLResponse+HeaderInterpretation.m"; sourceTree = "<group>"; };
+		43253E4D1A640CD000BEFDAB /* NSManagedObjectContext+FFEUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+FFEUtilities.h"; sourceTree = "<group>"; };
+		43253E4E1A640CD000BEFDAB /* NSManagedObjectContext+FFEUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+FFEUtilities.m"; sourceTree = "<group>"; };
+		43253E4F1A640CD000BEFDAB /* NSMutableURLRequest+HeaderInterpretation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableURLRequest+HeaderInterpretation.h"; sourceTree = "<group>"; };
+		43253E501A640CD000BEFDAB /* NSMutableURLRequest+HeaderInterpretation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableURLRequest+HeaderInterpretation.m"; sourceTree = "<group>"; };
+		43253E561A640D3A00BEFDAB /* ATLImporterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLImporterTests.m; sourceTree = "<group>"; };
+		43253E571A640D3A00BEFDAB /* ATLJourneyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLJourneyTests.m; sourceTree = "<group>"; };
+		43253E581A640D3A00BEFDAB /* ATLModelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLModelTests.m; sourceTree = "<group>"; };
+		43253E5C1A640D5900BEFDAB /* calendar_dates.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = calendar_dates.txt; path = resources/calendar_dates.txt; sourceTree = "<group>"; };
+		43253E5D1A640D5900BEFDAB /* feed_info.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = feed_info.txt; path = resources/feed_info.txt; sourceTree = "<group>"; };
+		43253E5E1A640D5900BEFDAB /* stop_times.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = stop_times.txt; path = resources/stop_times.txt; sourceTree = "<group>"; };
+		43253E5F1A640D5900BEFDAB /* t2_calendar_dates.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = t2_calendar_dates.txt; path = resources/t2_calendar_dates.txt; sourceTree = "<group>"; };
+		43253E601A640D5900BEFDAB /* t2_data.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = t2_data.xml; path = resources/t2_data.xml; sourceTree = "<group>"; };
+		43253E611A640D5900BEFDAB /* t2_stop_times.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = t2_stop_times.txt; path = resources/t2_stop_times.txt; sourceTree = "<group>"; };
+		43253E621A640D5900BEFDAB /* t2_trips.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = t2_trips.txt; path = resources/t2_trips.txt; sourceTree = "<group>"; };
+		43253E631A640D5900BEFDAB /* trips.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = trips.txt; path = resources/trips.txt; sourceTree = "<group>"; };
+		43253E6D1A64130B00BEFDAB /* ATLModel 10.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "ATLModel 10.xcdatamodel"; sourceTree = "<group>"; };
+		43253E701A64143900BEFDAB /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		43253E711A64143900BEFDAB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +236,16 @@
 		431299001A63E3EB00FF9965 /* FlamingoModel */ = {
 			isa = PBXGroup;
 			children = (
-				431299031A63E3EB00FF9965 /* AppDelegate.h */,
-				431299041A63E3EB00FF9965 /* AppDelegate.m */,
+				43253DB91A63E7B600BEFDAB /* Core Data */,
+				43253DBD1A63E7E700BEFDAB /* Service Model */,
+				43253DBC1A63E7DD00BEFDAB /* Journey Model */,
+				43253DBE1A63E7F100BEFDAB /* Infra Model */,
+				43253DBF1A63E7FD00BEFDAB /* Sync Model */,
+				43253DBB1A63E7D200BEFDAB /* Controller */,
+				43253DBA1A63E7BF00BEFDAB /* Categories */,
 				431299081A63E3EB00FF9965 /* Images.xcassets */,
 				4312990A1A63E3EB00FF9965 /* MainMenu.xib */,
+				43253E6F1A64142600BEFDAB /* Meta */,
 				431299011A63E3EB00FF9965 /* Supporting Files */,
 			);
 			path = FlamingoModel;
@@ -97,7 +263,10 @@
 		431299141A63E3EB00FF9965 /* FlamingoModelTests */ = {
 			isa = PBXGroup;
 			children = (
-				431299171A63E3EB00FF9965 /* FlamingoModelTests.m */,
+				43253E561A640D3A00BEFDAB /* ATLImporterTests.m */,
+				43253E571A640D3A00BEFDAB /* ATLJourneyTests.m */,
+				43253E581A640D3A00BEFDAB /* ATLModelTests.m */,
+				43253E551A640D1500BEFDAB /* resources */,
 				431299151A63E3EB00FF9965 /* Supporting Files */,
 			);
 			path = FlamingoModelTests;
@@ -109,6 +278,173 @@
 				431299161A63E3EB00FF9965 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		43253DB91A63E7B600BEFDAB /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				43253E6C1A64130B00BEFDAB /* ATLModel.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		43253DBA1A63E7BF00BEFDAB /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				43253E491A640CD000BEFDAB /* NSDate+Formatters.h */,
+				43253E4A1A640CD000BEFDAB /* NSDate+Formatters.m */,
+				43253E4B1A640CD000BEFDAB /* NSHTTPURLResponse+HeaderInterpretation.h */,
+				43253E4C1A640CD000BEFDAB /* NSHTTPURLResponse+HeaderInterpretation.m */,
+				43253E4D1A640CD000BEFDAB /* NSManagedObjectContext+FFEUtilities.h */,
+				43253E4E1A640CD000BEFDAB /* NSManagedObjectContext+FFEUtilities.m */,
+				43253E4F1A640CD000BEFDAB /* NSMutableURLRequest+HeaderInterpretation.h */,
+				43253E501A640CD000BEFDAB /* NSMutableURLRequest+HeaderInterpretation.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		43253DBB1A63E7D200BEFDAB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				43253E461A640CAD00BEFDAB /* ATLAppDelegate.h */,
+				43253E471A640CAD00BEFDAB /* ATLAppDelegate.m */,
+				43253E371A640C4D00BEFDAB /* FFEDataController.h */,
+				43253E381A640C4D00BEFDAB /* FFEDataController.m */,
+				43253E3A1A640C7200BEFDAB /* ATLDataController.h */,
+				43253E3B1A640C7200BEFDAB /* ATLDataController.m */,
+				43253E3C1A640C7200BEFDAB /* ATLFileImporter.h */,
+				43253E3D1A640C7200BEFDAB /* ATLFileImporter.m */,
+				43253E3E1A640C7200BEFDAB /* ATLScheduleImporter.h */,
+				43253E3F1A640C7200BEFDAB /* ATLScheduleImporter.m */,
+				43253E431A640C8000BEFDAB /* CHCSVparser.h */,
+				43253E441A640C8000BEFDAB /* CHCSVparser.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		43253DBC1A63E7DD00BEFDAB /* Journey Model */ = {
+			isa = PBXGroup;
+			children = (
+				43253E1F1A640BF400BEFDAB /* ATLMission.h */,
+				43253E201A640BF400BEFDAB /* ATLMission.m */,
+				43253E211A640BF400BEFDAB /* ATLStop.h */,
+				43253E221A640BF400BEFDAB /* ATLStop.m */,
+				43253E251A640C2200BEFDAB /* ATLJourney.h */,
+				43253E261A640C2200BEFDAB /* ATLJourney.m */,
+				43253E271A640C2200BEFDAB /* ATLJourneyElement.h */,
+				43253E281A640C2200BEFDAB /* ATLJourneyElement.m */,
+				43253E2D1A640C2200BEFDAB /* ATLTravelSection.h */,
+				43253E2E1A640C2200BEFDAB /* ATLTravelSection.m */,
+				43253E291A640C2200BEFDAB /* ATLTrajectory.h */,
+				43253E2A1A640C2200BEFDAB /* ATLTrajectory.m */,
+				43253E2F1A640C2200BEFDAB /* ATLVisit.h */,
+				43253E301A640C2200BEFDAB /* ATLVisit.m */,
+				43253E2B1A640C2200BEFDAB /* ATLTransfer.h */,
+				43253E2C1A640C2200BEFDAB /* ATLTransfer.m */,
+			);
+			name = "Journey Model";
+			sourceTree = "<group>";
+		};
+		43253DBD1A63E7E700BEFDAB /* Service Model */ = {
+			isa = PBXGroup;
+			children = (
+				43253E041A640AE000BEFDAB /* ATLService.h */,
+				43253E051A640AE000BEFDAB /* ATLService.m */,
+				43253E061A640AE000BEFDAB /* ATLServicePoint.h */,
+				43253E071A640AE000BEFDAB /* ATLServicePoint.m */,
+				43253E081A640AE000BEFDAB /* ATLServiceRef.h */,
+				43253E091A640AE000BEFDAB /* ATLServiceRef.m */,
+				43253E001A640AE000BEFDAB /* ATLSeries.h */,
+				43253E011A640AE000BEFDAB /* ATLSeries.m */,
+				43253E021A640AE000BEFDAB /* ATLSeriesRef.h */,
+				43253E031A640AE000BEFDAB /* ATLSeriesRef.m */,
+				43253DFC1A640AE000BEFDAB /* ATLOrganization.h */,
+				43253DFD1A640AE000BEFDAB /* ATLOrganization.m */,
+				43253DFE1A640AE000BEFDAB /* ATLRule.h */,
+				43253DFF1A640AE000BEFDAB /* ATLRule.m */,
+				43253DFA1A640AE000BEFDAB /* ATLMissionRule.h */,
+				43253DFB1A640AE000BEFDAB /* ATLMissionRule.m */,
+				43253E0A1A640AE000BEFDAB /* ATLServiceRule.h */,
+				43253E0B1A640AE000BEFDAB /* ATLServiceRule.m */,
+				43253DF81A640AE000BEFDAB /* ATLCalendarRule.h */,
+				43253DF91A640AE000BEFDAB /* ATLCalendarRule.m */,
+				43253E181A640B4300BEFDAB /* ATLTimePath.h */,
+				43253E191A640B4300BEFDAB /* ATLTimePath.m */,
+				43253E1A1A640B4300BEFDAB /* ATLTimePoint.h */,
+				43253E1B1A640B4300BEFDAB /* ATLTimePoint.m */,
+				43253E161A640B4300BEFDAB /* ATLPathNode.h */,
+				43253E171A640B4300BEFDAB /* ATLPathNode.m */,
+			);
+			name = "Service Model";
+			sourceTree = "<group>";
+		};
+		43253DBE1A63E7F100BEFDAB /* Infra Model */ = {
+			isa = PBXGroup;
+			children = (
+				43253DD71A6409DD00BEFDAB /* GeoMetricFunctions.h */,
+				43253DD81A6409DD00BEFDAB /* GeoMetricFunctions.m */,
+				43253DDA1A640A0B00BEFDAB /* ATLRoute.h */,
+				43253DDB1A640A0B00BEFDAB /* ATLRoute.m */,
+				43253DDE1A640A0B00BEFDAB /* ATLRoutePosition.h */,
+				43253DDF1A640A0B00BEFDAB /* ATLRoutePosition.m */,
+				43253DE01A640A0B00BEFDAB /* ATLSubRoute.h */,
+				43253DE11A640A0B00BEFDAB /* ATLSubRoute.m */,
+				43253DDC1A640A0B00BEFDAB /* ATLRouteOverlay.h */,
+				43253DDD1A640A0B00BEFDAB /* ATLRouteOverlay.m */,
+				43253DE61A640A2300BEFDAB /* ATLNode.h */,
+				43253DE71A640A2300BEFDAB /* ATLNode.m */,
+				43253DEB1A640A4400BEFDAB /* ATLLocation.h */,
+				43253DEC1A640A4400BEFDAB /* ATLLocation.m */,
+				43253DE91A640A4400BEFDAB /* ATLJunction.h */,
+				43253DEA1A640A4400BEFDAB /* ATLJunction.m */,
+				43253DED1A640A4400BEFDAB /* ATLStation.h */,
+				43253DEE1A640A4400BEFDAB /* ATLStation.m */,
+				43253DF21A640A5B00BEFDAB /* ATLAlias.h */,
+				43253DF31A640A5B00BEFDAB /* ATLAlias.m */,
+				43253DF51A640A6A00BEFDAB /* ATLStationAnnotation.h */,
+				43253DF61A640A6A00BEFDAB /* ATLStationAnnotation.m */,
+			);
+			name = "Infra Model";
+			sourceTree = "<group>";
+		};
+		43253DBF1A63E7FD00BEFDAB /* Sync Model */ = {
+			isa = PBXGroup;
+			children = (
+				43253DCE1A64097D00BEFDAB /* FFESyncing.h */,
+				43253DCA1A64097D00BEFDAB /* FFEAccount.h */,
+				43253DCB1A64097D00BEFDAB /* FFEAccount.m */,
+				43253DCC1A64097D00BEFDAB /* FFECatalog.h */,
+				43253DCD1A64097D00BEFDAB /* FFECatalog.m */,
+				43253DD11A6409A600BEFDAB /* ATLCatalog.h */,
+				43253DD21A6409A600BEFDAB /* ATLCatalog.m */,
+				43253DD31A6409A600BEFDAB /* ATLEntry.h */,
+				43253DD41A6409A600BEFDAB /* ATLEntry.m */,
+			);
+			name = "Sync Model";
+			sourceTree = "<group>";
+		};
+		43253E551A640D1500BEFDAB /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				43253E5C1A640D5900BEFDAB /* calendar_dates.txt */,
+				43253E5D1A640D5900BEFDAB /* feed_info.txt */,
+				43253E5E1A640D5900BEFDAB /* stop_times.txt */,
+				43253E5F1A640D5900BEFDAB /* t2_calendar_dates.txt */,
+				43253E601A640D5900BEFDAB /* t2_data.xml */,
+				43253E611A640D5900BEFDAB /* t2_stop_times.txt */,
+				43253E621A640D5900BEFDAB /* t2_trips.txt */,
+				43253E631A640D5900BEFDAB /* trips.txt */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		43253E6F1A64142600BEFDAB /* Meta */ = {
+			isa = PBXGroup;
+			children = (
+				43253E701A64143900BEFDAB /* LICENSE */,
+				43253E711A64143900BEFDAB /* README.md */,
+			);
+			name = Meta;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +536,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43253E651A640D5900BEFDAB /* feed_info.txt in Resources */,
+				43253E6B1A640D5900BEFDAB /* trips.txt in Resources */,
+				43253E641A640D5900BEFDAB /* calendar_dates.txt in Resources */,
+				43253E671A640D5900BEFDAB /* t2_calendar_dates.txt in Resources */,
+				43253E6A1A640D5900BEFDAB /* t2_trips.txt in Resources */,
+				43253E681A640D5900BEFDAB /* t2_data.xml in Resources */,
+				43253E661A640D5900BEFDAB /* stop_times.txt in Resources */,
+				43253E691A640D5900BEFDAB /* t2_stop_times.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,8 +554,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43253E311A640C2200BEFDAB /* ATLJourney.m in Sources */,
+				43253E521A640CD000BEFDAB /* NSHTTPURLResponse+HeaderInterpretation.m in Sources */,
+				43253E481A640CAD00BEFDAB /* ATLAppDelegate.m in Sources */,
+				43253DD01A64097D00BEFDAB /* FFECatalog.m in Sources */,
+				43253E1D1A640B4300BEFDAB /* ATLTimePath.m in Sources */,
+				43253E151A640AE000BEFDAB /* ATLServiceRule.m in Sources */,
+				43253E241A640BF400BEFDAB /* ATLStop.m in Sources */,
+				43253E0C1A640AE000BEFDAB /* ATLCalendarRule.m in Sources */,
+				43253E541A640CD000BEFDAB /* NSMutableURLRequest+HeaderInterpretation.m in Sources */,
 				431299071A63E3EB00FF9965 /* main.m in Sources */,
-				431299051A63E3EB00FF9965 /* AppDelegate.m in Sources */,
+				43253DE31A640A0B00BEFDAB /* ATLRouteOverlay.m in Sources */,
+				43253DEF1A640A4400BEFDAB /* ATLJunction.m in Sources */,
+				43253DCF1A64097D00BEFDAB /* FFEAccount.m in Sources */,
+				43253E331A640C2200BEFDAB /* ATLTrajectory.m in Sources */,
+				43253DD61A6409A600BEFDAB /* ATLEntry.m in Sources */,
+				43253DF41A640A5B00BEFDAB /* ATLAlias.m in Sources */,
+				43253E391A640C4D00BEFDAB /* FFEDataController.m in Sources */,
+				43253E401A640C7200BEFDAB /* ATLDataController.m in Sources */,
+				43253E231A640BF400BEFDAB /* ATLMission.m in Sources */,
+				43253DD51A6409A600BEFDAB /* ATLCatalog.m in Sources */,
+				43253DE81A640A2300BEFDAB /* ATLNode.m in Sources */,
+				43253E341A640C2200BEFDAB /* ATLTransfer.m in Sources */,
+				43253E321A640C2200BEFDAB /* ATLJourneyElement.m in Sources */,
+				43253E121A640AE000BEFDAB /* ATLService.m in Sources */,
+				43253E101A640AE000BEFDAB /* ATLSeries.m in Sources */,
+				43253E451A640C8000BEFDAB /* CHCSVparser.m in Sources */,
+				43253E1E1A640B4300BEFDAB /* ATLTimePoint.m in Sources */,
+				43253DF71A640A6A00BEFDAB /* ATLStationAnnotation.m in Sources */,
+				43253DF11A640A4400BEFDAB /* ATLStation.m in Sources */,
+				43253E421A640C7200BEFDAB /* ATLScheduleImporter.m in Sources */,
+				43253DE21A640A0B00BEFDAB /* ATLRoute.m in Sources */,
+				43253E6E1A64130B00BEFDAB /* ATLModel.xcdatamodeld in Sources */,
+				43253DE41A640A0B00BEFDAB /* ATLRoutePosition.m in Sources */,
+				43253DE51A640A0B00BEFDAB /* ATLSubRoute.m in Sources */,
+				43253E531A640CD000BEFDAB /* NSManagedObjectContext+FFEUtilities.m in Sources */,
+				43253E111A640AE000BEFDAB /* ATLSeriesRef.m in Sources */,
+				43253E131A640AE000BEFDAB /* ATLServicePoint.m in Sources */,
+				43253E0F1A640AE000BEFDAB /* ATLRule.m in Sources */,
+				43253E1C1A640B4300BEFDAB /* ATLPathNode.m in Sources */,
+				43253DF01A640A4400BEFDAB /* ATLLocation.m in Sources */,
+				43253E0D1A640AE000BEFDAB /* ATLMissionRule.m in Sources */,
+				43253E361A640C2200BEFDAB /* ATLVisit.m in Sources */,
+				43253E411A640C7200BEFDAB /* ATLFileImporter.m in Sources */,
+				43253E511A640CD000BEFDAB /* NSDate+Formatters.m in Sources */,
+				43253E0E1A640AE000BEFDAB /* ATLOrganization.m in Sources */,
+				43253DD91A6409DD00BEFDAB /* GeoMetricFunctions.m in Sources */,
+				43253E141A640AE000BEFDAB /* ATLServiceRef.m in Sources */,
+				43253E351A640C2200BEFDAB /* ATLTravelSection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,7 +609,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431299181A63E3EB00FF9965 /* FlamingoModelTests.m in Sources */,
+				43253E5A1A640D3A00BEFDAB /* ATLJourneyTests.m in Sources */,
+				43253E591A640D3A00BEFDAB /* ATLImporterTests.m in Sources */,
+				43253E5B1A640D3A00BEFDAB /* ATLModelTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +790,7 @@
 				4312991D1A63E3EB00FF9965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4312991E1A63E3EB00FF9965 /* Build configuration list for PBXNativeTarget "FlamingoModelTests" */ = {
 			isa = XCConfigurationList;
@@ -406,8 +799,22 @@
 				431299201A63E3EB00FF9965 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		43253E6C1A64130B00BEFDAB /* ATLModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				43253E6D1A64130B00BEFDAB /* ATLModel 10.xcdatamodel */,
+			);
+			currentVersion = 43253E6D1A64130B00BEFDAB /* ATLModel 10.xcdatamodel */;
+			path = ATLModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 431298F61A63E3EB00FF9965 /* Project object */;
 }

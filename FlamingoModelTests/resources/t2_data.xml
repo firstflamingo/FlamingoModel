@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testdata>
+    <junction id="nl.j_041" sameDirection="yes"/>
+    <junction id="nl.j_083" sameDirection="no"/>
+    <station id="nl.ut" name="Utrecht Centraal" importance="0" corridor="1" region="11"/>
+    <station id="nl.db" name="Driebergen-Zeist" importance="3" corridor="-1" region="11"/>
+    <station id="nl.klp" name="Veenendaal-De Klomp" importance="3" corridor="-1" region="11"/>
+    <station id="nl.ed" name="Ede-Wageningen" importance="2" corridor="1" region="9"/>
+    <station id="nl.ah" name="Arnhem" importance="1" corridor="1" region="9"/>
+    <station id="nl.nm" name="Nijmegen" importance="1" corridor="1" region="9"/>
+    
+    <service id="ic.j" express="yes" group="1" short="J" long="Intercity" image="(null)">
+        <frequency peak="4.0" base="4.0" offPeak="4.0"/>
+        <seriesRefs>
+            <ref series="nl.031" same="1" up="0" down="15"/>
+            <ref series="nl.030" same="1" up="75" down="0"/>
+        </seriesRefs>
+        <previousServices>
+            <ATLService id="ic.i"/>
+            <ATLService id="ic.h"/>
+        </previousServices>
+        <locations>
+            <station km="0.000" id="nl.ut"/>
+            <junction km="2.612" id="nl.j_041"/>
+            <station km="11.241" id="nl.db"/>
+            <station km="33.119" id="nl.klp"/>
+            <station km="40.192" id="nl.ed"/>
+            <station km="56.504" id="nl.ah"/>
+            <junction km="57.960" id="nl.j_083"/>
+            <station km="74.891" id="nl.nm"/>
+        </locations>
+    </service>
+
+    <series id="nl.030">
+        <serviceRefs>
+            <ref service="ic.j" same="1" up="75" down="0"/>
+        </serviceRefs>
+    </series>
+    <series id="nl.031">
+        <serviceRefs>
+            <ref service="ic.j" same="1" up="0" down="15"/>
+        </serviceRefs>
+    </series>
+</testdata>

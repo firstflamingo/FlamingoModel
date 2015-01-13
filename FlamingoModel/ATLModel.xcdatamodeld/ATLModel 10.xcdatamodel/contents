@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6244" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ATLAlias" representedClassName="ATLAlias" syncable="YES">
+        <attribute name="name" attributeType="String" maxValueString="35" indexed="YES" syncable="YES"/>
+        <relationship name="station" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLStation" inverseName="aliases" inverseEntity="ATLStation" syncable="YES"/>
+    </entity>
+    <entity name="ATLCatalog" representedClassName="ATLCatalog" syncable="YES">
+        <attribute name="catalogedType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastClientModification" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastServerModification" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="ATLEntry" representedClassName="ATLEntry" isAbstract="YES" syncable="YES">
+        <attribute name="id_" optional="YES" attributeType="String" maxValueString="20" indexed="YES" syncable="YES"/>
+        <attribute name="lastClientModification" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="lastServerModification" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="ATLJourney" representedClassName="ATLJourney" parentEntity="ATLEntry" syncable="YES">
+        <attribute name="positionIndex" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="statusInt" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="timeOfArrival" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="timeOfDeparture" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="elements" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ATLJourneyElement" inverseName="journey" inverseEntity="ATLJourneyElement" syncable="YES"/>
+    </entity>
+    <entity name="ATLJourneyElement" representedClassName="ATLJourneyElement" syncable="YES">
+        <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="statusInt" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="journey" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLJourney" inverseName="elements" inverseEntity="ATLJourney" syncable="YES"/>
+    </entity>
+    <entity name="ATLJunction" representedClassName="ATLJunction" parentEntity="ATLLocation" syncable="YES">
+        <attribute name="sameDirection" optional="YES" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+    </entity>
+    <entity name="ATLLocation" representedClassName="ATLLocation" parentEntity="ATLEntry" syncable="YES">
+        <relationship name="routePositions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ATLRoutePosition" inverseName="location" inverseEntity="ATLRoutePosition" syncable="YES"/>
+        <relationship name="servicePoints" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ATLServicePoint" inverseName="location" inverseEntity="ATLServicePoint" syncable="YES"/>
+    </entity>
+    <entity name="ATLMission" representedClassName="ATLMission" parentEntity="ATLEntry" syncable="YES">
+        <attribute name="timeOfArrival" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="timeOfDeparture" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="selectingTrajectories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLTrajectory" inverseName="selectedMission" inverseEntity="ATLTrajectory" syncable="YES"/>
+        <relationship name="serviceRules" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLServiceRule" inverseName="instantatedMissions" inverseEntity="ATLServiceRule" syncable="YES"/>
+        <relationship name="stops" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ATLStop" inverseName="mission" inverseEntity="ATLStop" syncable="YES"/>
+        <relationship name="trajectories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLTrajectory" inverseName="missions" inverseEntity="ATLTrajectory" syncable="YES"/>
+    </entity>
+    <entity name="ATLMissionRule" representedClassName="ATLMissionRule" parentEntity="ATLRule" syncable="YES">
+        <attribute name="notRunningDates" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="runningDates" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="trainType" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="series" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLSeries" inverseName="missionRules" inverseEntity="ATLSeries" syncable="YES"/>
+        <relationship name="timePath" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLTimePath" inverseName="missionRules" inverseEntity="ATLTimePath" syncable="YES"/>
+    </entity>
+    <entity name="ATLOrganization" representedClassName="ATLOrganization" parentEntity="ATLEntry" syncable="YES">
+        <attribute name="iconName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="concessions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLService" inverseName="grantor" inverseEntity="ATLService" syncable="YES"/>
+        <relationship name="operatedServices" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLService" inverseName="serviceOperator" inverseEntity="ATLService" syncable="YES"/>
+    </entity>
+    <entity name="ATLRoute" representedClassName="ATLRoute" parentEntity="ATLEntry" syncable="YES">
+        <attribute name="destination" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="heartLine" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="origin" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="positions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ATLRoutePosition" inverseName="route" inverseEntity="ATLRoutePosition" syncable="YES"/>
+        <relationship name="subRoutes" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ATLSubRoute" inverseName="route" inverseEntity="ATLSubRoute" syncable="YES"/>
+    </entity>
+    <entity name="ATLRoutePosition" representedClassName="ATLRoutePosition" syncable="YES">
+        <attribute name="km" optional="YES" attributeType="Float" defaultValueString="-9999" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" minValueString="-90" maxValueString="90" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" minValueString="-180" maxValueString="180" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLLocation" inverseName="routePositions" inverseEntity="ATLLocation" syncable="YES"/>
+        <relationship name="route" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLRoute" inverseName="positions" inverseEntity="ATLRoute" syncable="YES"/>
+    </entity>
+    <entity name="ATLRule" representedClassName="ATLRule" isAbstract="YES" parentEntity="ATLEntry" syncable="YES">
+        <attribute name="block" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="headsign" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="offset" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="upDirection" optional="YES" attributeType="Boolean" indexed="YES" syncable="YES"/>
+        <attribute name="weekdays" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="ATLSeries" representedClassName="ATLSeries" parentEntity="ATLEntry" syncable="YES">
+        <relationship name="missionRules" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLMissionRule" inverseName="series" inverseEntity="ATLMissionRule" syncable="YES"/>
+        <relationship name="seriesRefs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ATLSeriesRef" inverseName="series" inverseEntity="ATLSeriesRef" syncable="YES"/>
+    </entity>
+    <entity name="ATLSeriesRef" representedClassName="ATLSeriesRef" syncable="YES">
+        <attribute name="downCorrection" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="sameDirection" attributeType="Boolean" defaultValueString="YES" syncable="YES"/>
+        <attribute name="upCorrection" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="series" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ATLSeries" inverseName="seriesRefs" inverseEntity="ATLSeries" syncable="YES"/>
+        <relationship name="service" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ATLService" inverseName="seriesRefs" inverseEntity="ATLService" syncable="YES"/>
+    </entity>
+    <entity name="ATLService" representedClassName="ATLService" parentEntity="ATLEntry" syncable="YES">
+        <attribute name="baseFrequency" optional="YES" attributeType="Float" defaultValueString="2" syncable="YES"/>
+        <attribute name="expressService" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="group" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="offPeakFrequency" optional="YES" attributeType="Float" defaultValueString="2" syncable="YES"/>
+        <attribute name="peakFrequency" optional="YES" attributeType="Float" defaultValueString="2" syncable="YES"/>
+        <attribute name="shortName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="grantor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLOrganization" inverseName="concessions" inverseEntity="ATLOrganization" syncable="YES"/>
+        <relationship name="nextServiceRefs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ATLServiceRef" inverseName="previousService" inverseEntity="ATLServiceRef" syncable="YES"/>
+        <relationship name="previousServiceRefs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ATLServiceRef" inverseName="nextService" inverseEntity="ATLServiceRef" syncable="YES"/>
+        <relationship name="seriesRefs" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ATLSeriesRef" inverseName="service" inverseEntity="ATLSeriesRef" syncable="YES"/>
+        <relationship name="serviceOperator" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLOrganization" inverseName="operatedServices" inverseEntity="ATLOrganization" syncable="YES"/>
+        <relationship name="servicePoints" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ATLServicePoint" inverseName="service" inverseEntity="ATLServicePoint" syncable="YES"/>
+        <relationship name="serviceRules" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ATLServiceRule" inverseName="service" inverseEntity="ATLServiceRule" syncable="YES"/>
+    </entity>
+    <entity name="ATLServicePoint" representedClassName="ATLServicePoint" syncable="YES">
+        <attribute name="downArrival" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="downDeparture" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="downPlatform" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="km" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="options" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="upArrival" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="upDeparture" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="upPlatform" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="destinationRules" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLServiceRule" inverseName="destinationPoint" inverseEntity="ATLServiceRule" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLLocation" inverseName="servicePoints" inverseEntity="ATLLocation" syncable="YES"/>
+        <relationship name="noStopRules" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLServiceRule" inverseName="noStopPoints" inverseEntity="ATLServiceRule" syncable="YES"/>
+        <relationship name="originRules" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLServiceRule" inverseName="originPoint" inverseEntity="ATLServiceRule" syncable="YES"/>
+        <relationship name="service" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLService" inverseName="servicePoints" inverseEntity="ATLService" syncable="YES"/>
+    </entity>
+    <entity name="ATLServiceRef" representedClassName="ATLServiceRef" syncable="YES">
+        <relationship name="nextService" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLService" inverseName="previousServiceRefs" inverseEntity="ATLService" syncable="YES"/>
+        <relationship name="previousService" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLService" inverseName="nextServiceRefs" inverseEntity="ATLService" syncable="YES"/>
+    </entity>
+    <entity name="ATLServiceRule" representedClassName="ATLServiceRule" parentEntity="ATLRule" syncable="YES">
+        <relationship name="destinationPoint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLServicePoint" inverseName="destinationRules" inverseEntity="ATLServicePoint" syncable="YES"/>
+        <relationship name="instantatedMissions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLMission" inverseName="serviceRules" inverseEntity="ATLMission" syncable="YES"/>
+        <relationship name="noStopPoints" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLServicePoint" inverseName="noStopRules" inverseEntity="ATLServicePoint" syncable="YES"/>
+        <relationship name="originPoint" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLServicePoint" inverseName="originRules" inverseEntity="ATLServicePoint" syncable="YES"/>
+        <relationship name="service" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLService" inverseName="serviceRules" inverseEntity="ATLService" syncable="YES"/>
+    </entity>
+    <entity name="ATLStation" representedClassName="ATLStation" parentEntity="ATLLocation" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="icGroup" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
+        <attribute name="importance" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="labelAngle" optional="YES" attributeType="Integer 16" minValueString="-90" maxValueString="270" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="openedString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="regionGroup" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
+        <attribute name="wikiString" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="aliases" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLAlias" inverseName="station" inverseEntity="ATLAlias" syncable="YES"/>
+        <relationship name="stops" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ATLStop" inverseName="station" inverseEntity="ATLStop" syncable="YES"/>
+        <relationship name="transfers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLTransfer" inverseName="station" inverseEntity="ATLTransfer" syncable="YES"/>
+    </entity>
+    <entity name="ATLStop" representedClassName="ATLStop" syncable="YES">
+        <attribute name="alteredDestination" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="destination" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="estimatedArrival" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="estimatedDeparture" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="plannedArrival" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="plannedDeparture" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="platform" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="platformChange" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="statusInt" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="mission" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLMission" inverseName="stops" inverseEntity="ATLMission" syncable="YES"/>
+        <relationship name="station" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLStation" inverseName="stops" inverseEntity="ATLStation" syncable="YES"/>
+    </entity>
+    <entity name="ATLSubRoute" representedClassName="ATLSubRoute" syncable="YES">
+        <attribute name="electrification" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="end" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="gauge" optional="YES" attributeType="Integer 16" defaultValueString="1435" syncable="YES"/>
+        <attribute name="icGroup" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
+        <attribute name="importance" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="maxLat" optional="YES" attributeType="Double" minValueString="-90" maxValueString="90" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <attribute name="maxLon" optional="YES" attributeType="Double" minValueString="-180" maxValueString="180" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <attribute name="minLat" optional="YES" attributeType="Double" minValueString="-90" maxValueString="90" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <attribute name="minLon" optional="YES" attributeType="Double" minValueString="-180" maxValueString="180" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nrOfTracks" optional="YES" attributeType="Integer 16" defaultValueString="2" syncable="YES"/>
+        <attribute name="openedString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="regionGroup" optional="YES" attributeType="Integer 16" defaultValueString="-1" syncable="YES"/>
+        <attribute name="signaling" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="speed" optional="YES" attributeType="Integer 16" defaultValueString="140" syncable="YES"/>
+        <attribute name="start" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="route" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="ATLRoute" inverseName="subRoutes" inverseEntity="ATLRoute" syncable="YES"/>
+    </entity>
+    <entity name="ATLTimePath" representedClassName="ATLTimePath" syncable="YES">
+        <attribute name="hash_" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="timePointsData" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <relationship name="missionRules" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLMissionRule" inverseName="timePath" inverseEntity="ATLMissionRule" syncable="YES"/>
+    </entity>
+    <entity name="ATLTrajectory" representedClassName="ATLTrajectory" parentEntity="ATLTravelSection" syncable="YES">
+        <relationship name="missions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ATLMission" inverseName="trajectories" inverseEntity="ATLMission" syncable="YES"/>
+        <relationship name="selectedMission" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLMission" inverseName="selectingTrajectories" inverseEntity="ATLMission" syncable="YES"/>
+    </entity>
+    <entity name="ATLTransfer" representedClassName="ATLTransfer" parentEntity="ATLVisit" syncable="YES">
+        <relationship name="station" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ATLStation" inverseName="transfers" inverseEntity="ATLStation" syncable="YES"/>
+    </entity>
+    <entity name="ATLTravelSection" representedClassName="ATLTravelSection" parentEntity="ATLJourneyElement" syncable="YES"/>
+    <entity name="ATLVisit" representedClassName="ATLVisit" parentEntity="ATLJourneyElement" syncable="YES">
+        <attribute name="timeOfArrival" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="timeOfDeparture" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="ATLAlias" positionX="817" positionY="135" width="128" height="73"/>
+        <element name="ATLCatalog" positionX="-63" positionY="99" width="128" height="90"/>
+        <element name="ATLEntry" positionX="187" positionY="74" width="128" height="88"/>
+        <element name="ATLJourney" positionX="772" positionY="-256" width="128" height="133"/>
+        <element name="ATLJourneyElement" positionX="934" positionY="-250" width="128" height="88"/>
+        <element name="ATLJunction" positionX="576" positionY="138" width="128" height="60"/>
+        <element name="ATLLocation" positionX="385" positionY="132" width="128" height="73"/>
+        <element name="ATLMission" positionX="592" positionY="-576" width="128" height="133"/>
+        <element name="ATLMissionRule" positionX="9" positionY="-561" width="128" height="120"/>
+        <element name="ATLOrganization" positionX="-47" positionY="-75" width="128" height="120"/>
+        <element name="ATLRoute" positionX="351" positionY="243" width="128" height="135"/>
+        <element name="ATLRoutePosition" positionX="558" positionY="231" width="128" height="120"/>
+        <element name="ATLRule" positionX="54" positionY="-414" width="128" height="133"/>
+        <element name="ATLSeries" positionX="-218" positionY="-252" width="128" height="73"/>
+        <element name="ATLSeriesRef" positionX="-11" positionY="-225" width="128" height="118"/>
+        <element name="ATLService" positionX="196" positionY="-252" width="128" height="268"/>
+        <element name="ATLServicePoint" positionX="403" positionY="-360" width="128" height="238"/>
+        <element name="ATLServiceRef" positionX="214" positionY="-372" width="128" height="75"/>
+        <element name="ATLServiceRule" positionX="394" positionY="-576" width="128" height="118"/>
+        <element name="ATLStation" positionX="621" positionY="-91" width="128" height="208"/>
+        <element name="ATLStop" positionX="610" positionY="-361" width="128" height="208"/>
+        <element name="ATLSubRoute" positionX="178" positionY="207" width="128" height="298"/>
+        <element name="ATLTimePath" positionX="-198" positionY="-403" width="128" height="88"/>
+        <element name="ATLTrajectory" positionX="810" positionY="-484" width="128" height="73"/>
+        <element name="ATLTransfer" positionX="828" positionY="18" width="128" height="58"/>
+        <element name="ATLTravelSection" positionX="934" positionY="-331" width="128" height="43"/>
+        <element name="ATLVisit" positionX="936" positionY="-117" width="128" height="73"/>
+    </elements>
+</model>
